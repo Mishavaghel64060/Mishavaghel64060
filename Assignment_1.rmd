@@ -1,0 +1,36 @@
+---
+title: "Assignment_1"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+date: "2024-29-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+demotest <-read.csv("CARS_1.csv")
+print(head(demotest))
+```
+```{r}
+demotest$fuel_tank_capacity
+```
+```{r}
+table(demotest$transmission_type)
+```
+
+```{r}
+x<-log(demotest$fuel_tank_capacity)
+head(x)
+```
+
+```{r}
+hist(demotest$starting_price,xlab="X-axis",ylab="Y-axis",main="Histogram of Quantitative Variable",col="blue")
+```
+```{r}
+plot(demotest$max_power_bhp,xlab="X-axis",ylab="Y-axis",main="SCATTER PLOT",pch=6,col="orange")
+```
+
